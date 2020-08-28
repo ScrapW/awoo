@@ -1,6 +1,7 @@
 DROP DATABASE IF EXISTS awoo;
 CREATE DATABASE awoo;
-GRANT ALL ON awoo.* TO awoo@'%' IDENTIFIED BY 'awoo';
+CREATE USER awoo@'%' IDENTIFIED BY 'awoo';
+GRANT ALL ON awoo.* TO awoo@'%';
 USE awoo;
 CREATE TABLE posts (
 	board TEXT NOT NULL,
